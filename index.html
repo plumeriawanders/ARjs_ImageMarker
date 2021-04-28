@@ -6,7 +6,6 @@
     AFRAME.registerComponent("videohandler", {
       init: function() {
         var marker = this.el;
-        console.log({marker});
 
 
         this.vid = document.querySelector("#vid");
@@ -14,6 +13,7 @@
         marker.addEventListener(
           "markerFound",
           function() {
+            console.log(marker);
             this.vid.play();
           }.bind(this)
         );
