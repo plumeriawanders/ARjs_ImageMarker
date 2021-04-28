@@ -55,11 +55,11 @@ function isMobile() {
 }
 
 var markers = {
-    "pinball": {
+    "image": {
         width: 1637,
         height: 2048,
         dpi: 215,
-        url: "DataNFT/pinball",
+        url: "DataNFT/image",
     },
 };
 
