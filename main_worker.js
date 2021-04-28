@@ -59,7 +59,7 @@ var markers = {
         width: 1637,
         height: 2048,
         dpi: 215,
-        url: "./DataNFT/pinball",
+        url: "DataNFT/pinball",
     },
 };
 
@@ -71,7 +71,7 @@ function start(container, marker, video, input_width, input_height, canvas_draw,
     var pw, ph;
     var ox, oy;
     var worker;
-    var camera_para = './Data/camera_para-iPhone 5 rear 640x480 1.0m.dat'
+    var camera_para = 'Data/camera_para-iPhone 5 rear 640x480 1.0m.dat'
 
     var canvas_process = document.createElement('canvas');
     var context_draw = canvas_draw.getContext('2d');
@@ -105,7 +105,7 @@ function start(container, marker, video, input_width, input_height, canvas_draw,
         canvas_process.width = pw;
         canvas_process.height = ph;
 
-        worker = new Worker('./js/artoolkit.worker.js');
+        worker = new Worker('js/artoolkit.worker.js');
 
         worker.postMessage({type: "load", pw: pw, ph: ph, camera_para: camera_para, marker: '../' + marker.url});
 
